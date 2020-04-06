@@ -770,7 +770,7 @@ index e32b6126af..b671558451 100644
 +            }
 +            // NOTE: enclave permissions are not enforced outisde DRAM
 +          } else { // This may be a mega or regular page
-+            if ( ( (1<<(((ppn << PGSHIFT) >> 25)&0x3F)) & mrbm ) == 0) {
++            if ( ( (1ULL<<(((ppn << PGSHIFT) >> 25)&0x3F)) & mrbm ) == 0) {
 +              return TRANSLATE_FAIL;
 +            }
 +          }
